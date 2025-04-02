@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form >
+        <div class="input-section">
+            <input type="password"id="passwordInput">
+            <img src="eye.svg" id="eyeBtn">
+        </div>
+    </form>
+
+    <script>
+
+        const input = document.querySelector('#passwordInput');
+        const eyeBtn = document.querySelector('#eyeBtn');
+
+        eyeBtn.onclick = function(){
+            if(input.type === 'password')
+        {
+            input.type = 'text';
+            eyeBtn.setAttribute('src','iconmonstr-eye-off-thin.png');
+        }
+        else{
+            input.type = 'password';
+            eyeBtn.setAttribute('src','eye.svg');
+        }
+        }
+    </script>
+</body>
+</html>
